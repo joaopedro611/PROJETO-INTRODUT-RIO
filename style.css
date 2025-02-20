@@ -53,8 +53,9 @@ body * {
 #container {
   /*border: 1px solid red;
   /*BORDA*/
-  width: 360px;
+  width: 100%;
   /*LARGURA*/
+  max-width: 588px;
   margin: 56px auto 0px;
   /*MARGEM*/
   /*padding-top: 56px;*/
