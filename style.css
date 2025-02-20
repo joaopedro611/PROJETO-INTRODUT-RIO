@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* RESET DO CSS */
+}
+
+:root {
+  --text-color: white;
+  /* root: HTML */
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.png);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  /* URL: CAMINHO DE ONDE ESTÁ A MINHA IMAGEM */
+
+  /*background-repeat: no-repeat;
+  /* PARA NÃO REPETIR A IMAGEM NA WEB */
+
+  /*background-position: top center;
+  /* localização da minha imagem */
+
+  /*background-size: cover;
+  /* COBRE TODO O ESPAÇO DA TELA REFERENTE A IMAGEM QUE ESCOLHEU 
+  */
+
+  /*background: color image repeat position /size */
+  background: var(--bg-url) no-repeat top center/cover;
+  /*SIMPLIFICAÇÃO DO COMANDO "background" */
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  /*border: 1px solid red;
+  /*BORDA*/
+  width: 360px;
+  /*LARGURA*/
+  margin: 56px auto 0px;
+  /*MARGEM*/
+  /*padding-top: 56px;*/
+  padding: 0 24px;
+}
+
+/* profile */
+#profile {
+  text-align: center;
+  /*ALINHAR O ELEMENTO*/
+  padding: 24px;
+  /* PREENCHIMENTO INTERNO DA CAIXA */
+}
+
+#profile img {
+  width: 112px;
+  /*LARGURA*/
+}
+
+#profile p {
+  font-weight: 500;
+  /* PESO DA LETRA */
+  line-height: 24px;
+  /* ALTURA DA LINHA */
+  margin-top: 8px;
+}
+
+/* switch */
+#switch {
+  position: relative;
+  width: 64px;
+
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/* links */
+ul {
+  list-style: none;
+  /* none: nenhhum; list style: nenhuma lista no link do site */
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* gap: espaço entre os elementos */
+
+  padding: 24px 0;
+}
+ul li a {
+  /*border: 1px solid red; */
+  /* li: ocupa todo o espaço da caixa */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  /* rgba: red,green,blue,transparência */
+  /* 255: branco */
+
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  /* nenhuma linha embaixo dos links */
+  font-weight: 500;
+  transition: background 0.2s;
+  /* qual propriedade quero trnsicionar */
+}
+
+ul li a:hover {
+  /* qnd passar o mouse em cima da unformação ela será registrada */
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/* SOCIAL-LINKS */
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
